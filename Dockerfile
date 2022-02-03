@@ -1,5 +1,6 @@
 FROM ubuntu:bionic
 
+RUN apt-get clean
 RUN apt-get update
 RUN apt-get install -y git unzip libfdt-dev android-tools-fastboot sunxi-tools u-boot-tools wget sudo
 RUN git clone https://github.com/CHIP-SHED/Flash-CHIP; cd Flash-CHIP; chmod +x Flash.sh
